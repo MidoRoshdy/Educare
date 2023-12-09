@@ -1,3 +1,5 @@
+import 'package:educare2/screens/userhandel/forgetpassword/components/create%20pass/createpassword.dart';
+import 'package:educare2/screens/userhandel/forgetpassword/components/succes%20pass/successpassword.dart';
 import 'package:educare2/screens/userhandel/forgetpassword/forgetpassword.dart';
 import 'package:educare2/screens/userhandel/login/login.dart';
 import 'package:flutter/material.dart';
@@ -18,9 +20,11 @@ class AppRoutes {
   //create account and choose
   static const String signup = "signup";
   //reset password and email send
+  static const String createpassword = "createpassword";
   static const String forgetPassword = "forgetPassword";
   static const String emailSent = "emailSent";
   static const String chooseNewPass = "chooseNewPass";
+  static const String sucesspassword = "sucesspassword";
   //homescreen
   static const String home = "home";
 
@@ -62,10 +66,22 @@ class AppRoutes {
             return const LoginPage();
           },
         );
+      case createpassword:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const CreatePassword();
+          },
+        );
       case forgetPassword:
         return MaterialPageRoute(
           builder: (context) {
             return const ForgetPasswordPage();
+          },
+        );
+      case sucesspassword:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const SuccessPassword();
           },
         );
       case home:
