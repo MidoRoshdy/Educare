@@ -9,7 +9,7 @@ class SplashScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         body: Center(
             child: Container(
-          color: Color.fromARGB(255, 74, 73, 72),
+          color: const Color.fromARGB(255, 204, 123, 42),
         )));
   }
 }
