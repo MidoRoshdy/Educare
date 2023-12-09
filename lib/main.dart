@@ -1,8 +1,11 @@
+import 'package:educare2/screens/home/provider/homeprovider.dart';
+import 'package:educare2/screens/userhandel/forgetpassword/provider/forgetpasswordprovider.dart';
+import 'package:educare2/screens/userhandel/login/provider/loginprovider.dart';
+import 'package:educare2/screens/userhandel/signup/provider/signupprovder.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
-
-import 'SplashScreen/provider/splashprovider.dart';
+import 'screens/SplashScreen/provider/splashprovider.dart';
 import 'core/app_routes.dart';
 
 void main() {
@@ -19,6 +22,11 @@ class MyApp extends StatelessWidget {
       return MultiProvider(
         providers: [
           ListenableProvider<SplashProvider>(create: (_) => SplashProvider()),
+          ListenableProvider<LoginProvider>(create: (_) => LoginProvider()),
+          ListenableProvider<SignUpProvider>(create: (_) => SignUpProvider()),
+          ListenableProvider<ForgetPasswordProvider>(
+              create: (_) => ForgetPasswordProvider()),
+          ListenableProvider<HomeProvider>(create: (_) => HomeProvider()),
         ],
         child: MaterialApp(
           title: "Educare",
