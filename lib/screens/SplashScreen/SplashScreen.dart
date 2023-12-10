@@ -138,6 +138,26 @@ class SplashScreen extends StatelessWidget {
                                 fontWeight: FontWeight.w500),
                           ),
                         )),
+                    SizedBox(
+                        width: 90.w,
+                        height: 7.h,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.of(context).pushNamed(AppRoutes.login);
+                          },
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor:
+                                  const Color.fromARGB(255, 204, 123, 42),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(50))),
+                          child: Text(
+                            "login ",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12.sp,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        )),
                   ],
                 ))));
   }
