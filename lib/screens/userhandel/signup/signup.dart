@@ -14,22 +14,33 @@ class SignUpPage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          actions: [
-          Image.asset(
-            Assets.logo_with_appbar,
-            width: 133.67,
-            height: 22,
-          ),
-        ],
           leading:
               IconButton(icon: Icon(Iconsax.arrow_left_2), onPressed: () {}),
         ),
         body: Container(
+          child: Column(
+            children: [
+              Text(
+                "Register",
+                style: TextStyle(
+                    color: Color(0xff000000),
+                    fontSize: 29.05,
+                    fontWeight: FontWeight.w700),
+              ),
+              Text(
+                "Please create an account to track your child",
+                style: TextStyle(
+                    color: Color(0xff7D7D7D),
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500),
+              ),
+            ],
+          ),
           padding: const EdgeInsets.symmetric(
             horizontal: 20,
           ),
           width: MediaQuery.of(context).size.width,
-          child: Column(
+           child: Column(
             children: [
               TextFormField(
                 decoration: InputDecoration(
@@ -42,7 +53,31 @@ class SignUpPage extends StatelessWidget {
                     color: Color(0xffD9D9D9),
                   ),
                 ),
-              )
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                  hintText: 'Email',
+                  prefixIcon: Icon(
+                    Iconsax.sms,
+                  ),
+                  hintStyle: TextStyle(
+                    fontSize: 14,
+                    color: Color(0xffD9D9D9),
+                  ),
+                ),
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                  hintText: 'Password',
+                  prefixIcon: Icon(
+                    Iconsax.eye_slash,
+                  ),
+                  hintStyle: TextStyle(
+                    fontSize: 14,
+                    color: Color(0xffD9D9D9),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
