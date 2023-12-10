@@ -6,60 +6,45 @@ import 'package:sizer/sizer.dart';
 class SignUpPage extends StatelessWidget {
   const SignUpPage({Key? key}) : super(key: key);
 
+  get ps => null;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Container(
-            margin: EdgeInsets.only(left: 210, top: 10),
-            child: Image.asset(
-              Assets.logo_appbar,
-              width: 200,
-              height: 200,
-              scale: 1,
-            ),
+          actions: [
+          Image.asset(
+            Assets.logo_with_appbar,
+            width: 133.67,
+            height: 22,
           ),
-          // backgroundColor: Colors.blue,
+        ],
           leading:
               IconButton(icon: Icon(Iconsax.arrow_left_2), onPressed: () {}),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(
-              height: 100,
-              margin: EdgeInsets.only(left: 1, right: 180, top: 0),
-              child: Text(
-                'Register',
-                style: TextStyle(
-                  fontSize: 26,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Divider(
-              color: Colors.transparent,
-              height: 1.h,
-            ),
-            Column(
-              children: [
-                Container(
-                  height: 100,
-                  width: 300,
-                  margin: EdgeInsets.only(left: 25, right: 20, top: 0),
-                  child: Text(
-                    'Please create an account to track your child',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Color(0xff7D7D7D),
-                    ),
+        body: Container(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+          ),
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            children: [
+              TextFormField(
+                decoration: InputDecoration(
+                  hintText: 'Educational code',
+                  prefixIcon: Icon(
+                    Iconsax.d_cube_scan,
+                  ),
+                  hintStyle: TextStyle(
+                    fontSize: 14,
+                    color: Color(0xffD9D9D9),
                   ),
                 ),
-              ],
-            ),
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );
