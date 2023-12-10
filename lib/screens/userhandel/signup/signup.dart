@@ -1,39 +1,67 @@
+import 'package:educare2/core/Assets.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../../core/app_routes.dart';
-
 class SignUpPage extends StatelessWidget {
-  const SignUpPage({super.key});
+  const SignUpPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Center(
-      child: Column(
-        children: [
-          SizedBox(
-              width: 90.w,
-              height: 7.h,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context).pushNamed(AppRoutes.splash);
-                },
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color.fromARGB(255, 204, 123, 42),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50))),
-                child: Text(
-                  "back ",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w500),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Container(
+            margin: EdgeInsets.only(left: 210, top: 10),
+            child: Image.asset(
+              Assets.logo_appbar,
+              width: 200,
+              height: 200,
+              scale: 1,
+            ),
+          ),
+          // backgroundColor: Colors.blue,
+          leading:
+              IconButton(icon: Icon(Iconsax.arrow_left_2), onPressed: () {}),
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              height: 100,
+              margin: EdgeInsets.only(left: 1, right: 180, top: 0),
+              child: Text(
+                'Register',
+                style: TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
                 ),
-              )),
-          const Text("sign up "),
-        ],
+              ),
+            ),
+            Divider(
+              color: Colors.transparent,
+              height: 1.h,
+            ),
+            Column(
+              children: [
+                Container(
+                  height: 100,
+                  width: 300,
+                  margin: EdgeInsets.only(left: 25, right: 20, top: 0),
+                  child: Text(
+                    'Please create an account to track your child',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Color(0xff7D7D7D),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
-    ));
+    );
   }
 }
