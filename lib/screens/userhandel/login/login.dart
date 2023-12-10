@@ -30,7 +30,7 @@ class LoginPage extends StatelessWidget {
                     height: 5.h,
                     width: 25.w,
                     child: Image.asset(
-                      Assets.logo_with_appbar,
+                      Assets.logox2,
                     ),
                   ),
                 ),
