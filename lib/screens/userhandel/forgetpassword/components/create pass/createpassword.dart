@@ -21,7 +21,7 @@ class CreatePassword extends StatelessWidget {
                   Navigator.of(context).pushNamed(AppRoutes.splash);
                 },
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                    backgroundColor: Color.fromARGB(255, 255, 0, 0),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50))),
                 child: Text(
